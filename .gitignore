@@ -1,0 +1,5 @@
+__pycache__/
+.tox/
+docs/_build/
+dist/
+.python-version
