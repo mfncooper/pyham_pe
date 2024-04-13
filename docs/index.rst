@@ -89,6 +89,21 @@ Documentation
    If you are looking for information on a specific function, class, or method,
    this part of the documentation is for you.
 
+Discussion
+----------
+
+If you have questions about how to use this package, the documentation should
+be your first point of reference. If the User Guide, API Reference, or
+Compatibility guide don't answer your questions, or you'd simply like to share
+your experiences or generally discuss this package, please join the community
+on the
+`PyHam PE Discussions <https://github.com/mfncooper/pyham_pe/discussions>`__
+forum.
+
+Note that the GitHub Issues tracker should be used only for reporting bugs or
+filing feature requests, and should not be used for questions or general
+discussion.
+
 References
 ----------
 
