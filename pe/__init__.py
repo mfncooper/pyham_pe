@@ -1091,10 +1091,10 @@ class PacketEngine:
         self._version_info = (major, minor)
         self._active_handler.version_info(major, minor)
 
-    def _frame_received_S(self, header, data):
+    def _frame_received_S(self, header, rawdata):
+        [text, data] = self.parse_monitor_data(rawdata)
         self._active_handler.monitored_supervisory(
-            header.port, header.call_from, header.call_to,
-            data.decode('utf-8'))
+            header.port, header.call_from, header.call_to, text)
 
     def _frame_received_T(self, header, rawdata):
         [text, data] = self.parse_monitor_data(rawdata)
