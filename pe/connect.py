@@ -238,6 +238,7 @@ class _ConnectionMap:
             raise ValueError('Connection already exists')
         conn._key = key
         self._connections[key] = conn
+        return key
 
     def remove(self, conn):
         if conn._key is None or conn._key not in self._connections:
@@ -317,10 +318,10 @@ class _ConnectionReceiveHandler(ReceiveHandler):
         if incoming:
             if conn:
                 return
-            if not self._connection_class.query_accept(
+            if not Connection._connection_cls.query_accept(
                     port, call_from, call_to):
                 return
-            conn = self._connection_class(port, call_from, call_to)
+            conn = Connection._connection_cls(port, call_from, call_to)
             conn._engine = self._engine  # Needed in connection object?
             conn._key = self._connection_map.add(conn)
             conn._state = ConnectionState.CONNECTED
