@@ -18,8 +18,9 @@ The AGWPE protocol, and thus this package, has the advantage, over other
 commonly used protocols such as KISS, that it can be easily used to create
 connected-mode sessions. As such, it can be used to create many types of
 ham radio software, from simple beaconing to full-fledged packet radio
-terminal applications akin to Linpac. (See PyHam's Paracon software for an
-example of the latter.)
+terminal applications akin to Linpac. (See PyHam's
+[Paracon](https://paracon.readthedocs.io/)
+software for an example of the latter.)
 
 It is expected that developers working with this package will have some level
 of understanding of the AGWPE protocol, though detailed knowledge is *not*
