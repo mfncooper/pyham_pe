@@ -18,6 +18,7 @@ most popular AGWPE servers:
 - Direwolf v1.7
 - ldsped v1.19
 - AGWPE v2013.415
+- QtSoundModem 0.0.0.73
 
 
 Protocol features
@@ -33,39 +34,53 @@ fully supported by all servers. All other facets are supported by all servers.
      - Direwolf
      - ldsped
      - AGWPE
+     - QtSoundModem
    * - Application login
      - No
      - Yes
      - Yes
+     - No
    * - Port capabilities
      - Yes [#]_
+     - Yes
      - Yes
      - Yes
    * - Heard stations
      - No
      - Yes [#]_
      - Yes
+     - No
    * - Frames waiting on port
      - Yes
      - No
      - Yes
+     - No
    * - Monitor own frames
      - Yes
      - No
      - Yes
+     - Yes
+   * - Unproto with vias
+     - Yes
+     - Yes
+     - Yes
+     - No
    * - Non-standard connections
      - Yes
      - No
      - Yes
+     - No
    * - Incoming connections
      - Yes
      - No
      - Yes
+     - Yes
 
 .. rubric:: Notes
 
-.. [#] Direwolf hard-codes a value of 1 for the number of bytes received in
-       the last two minutes.
+.. [#] Direwolf hard-codes all values for port capabilities, so the values
+       retrieved via AGWPE will likely not match any settings specified in the
+       Direwolf config file.
 .. [#] ldsped versions prior to 1.19 do not include the time data structures,
        only the string representation.
 
@@ -77,3 +92,5 @@ Additional notes
   a port configured in this way, functions such as monitoring will behave
   normally, while others such as attempting to register a callsign will
   silently fail.
+- PyHam PE requires version 0.0.0.73 or higher of QtSoundModem due to some
+  issues with QTSM's AGWPE protocol implementation in earlier versions.
