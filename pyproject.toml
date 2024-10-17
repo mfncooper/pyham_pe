@@ -22,7 +22,7 @@ requires-python = ">=3.7"
 dynamic = ["version"]
 
 [project.urls]
-Documentation = "https://pyham_pe.readthedocs.io"
+Documentation = "https://pyham-pe.readthedocs.io"
 "Source Code" = "https://github.com/mfncooper/pyham_pe"
 
 [tool.flit.module]
