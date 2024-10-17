@@ -24,12 +24,15 @@ dynamic = ["version"]
 [project.urls]
 Documentation = "https://pyham-pe.readthedocs.io"
 "Source Code" = "https://github.com/mfncooper/pyham_pe"
+"Change Log" = "https://github.com/mfncooper/pyham_pe/blob/main/CHANGELOG.md"
 
 [tool.flit.module]
 name = "pe"
 
 [tool.flit.sdist]
 include = [
+    "CHANGELOG.md",
+    "LICENSE",
     "docs/",
     "tox.ini"
 ]
