@@ -1046,7 +1046,7 @@ class PacketEngine:
 
     def _frame_received_C(self, header, data):
         message = data.decode('utf-8')
-        incoming = (header.call_to in self._registered_callsigns)
+        incoming = message.startswith('*** CONNECTED To ')
         self._active_handler.connection_received(
             header.port, header.call_from, header.call_to, incoming, message)
 
