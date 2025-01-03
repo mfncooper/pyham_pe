@@ -180,15 +180,22 @@ class Connection:
         :param data: Data to be sent.
         :type data: bytes or bytearray
         """
-        self._engine.send_data(
-            self._port, self._call_from, self._call_to, data)
+        if not self.incoming:
+            self._engine.send_data(
+                self._port, self._call_from, self._call_to, data)
+        else:
+            self._engine.send_data(
+                self._port, self._call_to, self._call_from, data)
 
     def close(self):
         """
         Close the currently open connection.
         """
         self._state = ConnectionState.DISCONNECTING
-        self._engine.disconnect(self._port, self._call_from, self._call_to)
+        if not self.incoming:
+            self._engine.disconnect(self._port, self._call_from, self._call_to)
+        else:
+            self._engine.disconnect(self._port, self._call_to, self._call_from)
 
     # Methods for subclasses to implement
 
@@ -321,7 +328,7 @@ class _ConnectionReceiveHandler(ReceiveHandler):
             if not Connection._connection_cls.query_accept(
                     port, call_from, call_to):
                 return
-            conn = Connection._connection_cls(port, call_from, call_to)
+            conn = Connection._connection_cls(port, call_from, call_to, incoming=incoming)
             conn._engine = self._engine  # Needed in connection object?
             conn._key = self._connection_map.add(conn)
             conn._state = ConnectionState.CONNECTED
