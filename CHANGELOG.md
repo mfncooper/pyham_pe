@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.1.1] - 2025-05-26
+
+### Fixed
+
+- Fixed call from / call to order for incoming connections.
+
 ## [1.1.0] - 2024-10-17
 
 ### Added
@@ -24,6 +30,7 @@
 
 - First public release.
 
-[unreleased]: https://github.com/mfncooper/pyham_pe/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/mfncooper/pyham_pe/compare/v1.1.1...HEAD
+[1.1.1]: https://github.com/mfncooper/pyham_pe/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/mfncooper/pyham_pe/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mfncooper/pyham_pe/tree/v1.0.0

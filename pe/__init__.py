@@ -1,5 +1,5 @@
 # =============================================================================
-# Copyright (c) 2018-2024 Martin F N Cooper
+# Copyright (c) 2018-2025 Martin F N Cooper
 #
 # Author: Martin F N Cooper
 # License: MIT License
@@ -18,7 +18,7 @@ Protocol reference:
 """
 
 __author__ = 'Martin F N Cooper'
-__version__ = '1.1.0'
+__version__ = '1.1.1'
 
 from datetime import datetime
 from enum import Enum, auto
