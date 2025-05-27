@@ -1,5 +1,5 @@
 # =============================================================================
-# Copyright (c) 2018-2024 Martin F N Cooper
+# Copyright (c) 2018-2025 Martin F N Cooper
 #
 # Author: Martin F N Cooper
 # License: MIT License
@@ -204,7 +204,7 @@ class DebugReceiveHandler(ReceiveHandler):
     def connected_data(self, port, call_from, call_to, pid, data):
         self._debug_out(
             ('connected_data:\n  port: {}\n  call_from: {}\n'
-             '  call_to: {}\n  pid: {}\n  data: {}\n').format(
+             '  call_to: {}\n  pid: {:#02x}\n  data: {}\n').format(
                 port, call_from, call_to, pid, data))
 
     def disconnected(self, port, call_from, call_to, message):
