@@ -918,8 +918,11 @@ class PacketEngine:
         :param data: The AX.25 frame to be sent.
         :type data: bytes or bytearray
         """
-        h = _Header(port, 'K', 0, call_from, call_to, len(data))
-        self._send_frame(h, data)
+        h = _Header(port, 'K', 0, call_from, call_to, 1 + len(data))
+        buffer = bytearray()
+        buffer.append(0)
+        buffer.extend(data)
+        self._send_frame(h, buffer)
 
     def ask_callsigns_heard_on_port(self, port):  # 'H' frame
         """
