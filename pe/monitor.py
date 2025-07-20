@@ -1,5 +1,5 @@
 # =============================================================================
-# Copyright (c) 2018-2024 Martin F N Cooper
+# Copyright (c) 2018-2025 Martin F N Cooper
 #
 # Author: Martin F N Cooper
 # License: MIT License
