@@ -2,6 +2,12 @@
 
 ## [Unreleased]
 
+## [1.1.2] - 2025-07-20
+
+### Fixed
+
+- Fixed missing TNC Port byte when sending raw AX.25 frame.
+
 ## [1.1.1] - 2025-05-26
 
 ### Fixed
@@ -30,7 +36,8 @@
 
 - First public release.
 
-[unreleased]: https://github.com/mfncooper/pyham_pe/compare/v1.1.1...HEAD
+[unreleased]: https://github.com/mfncooper/pyham_pe/compare/v1.1.2...HEAD
+[1.1.2]: https://github.com/mfncooper/pyham_pe/compare/v1.1.1...v1.1.2
 [1.1.1]: https://github.com/mfncooper/pyham_pe/compare/v1.1.0...v1.1.1
 [1.1.0]: https://github.com/mfncooper/pyham_pe/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mfncooper/pyham_pe/tree/v1.0.0

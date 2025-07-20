@@ -18,7 +18,7 @@ Protocol reference:
 """
 
 __author__ = 'Martin F N Cooper'
-__version__ = '1.1.1'
+__version__ = '1.1.2'
 
 from datetime import datetime
 from enum import Enum, auto
