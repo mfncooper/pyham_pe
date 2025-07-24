@@ -31,6 +31,14 @@ may wish to refer to the
 `AGWPE protocol reference <https://www.on7lds.net/42/sites/default/files/AGWPEAPI.HTM>`__
 in conjunction with the documentation for this package.
 
+.. sidebar::
+    :class: bmc-sidebar
+
+    .. raw:: html
+
+        <link href="https://fonts.googleapis.com/css?family=Cookie&amp;display=swap" rel="stylesheet">
+        <a class="bmc-btn" target="_blank" href="https://buymeacoffee.com/pyham"><svg height="28" width="19"><image xlink:href="_static/images/bmc-logo.svg" src="_static/images/bmc-logo.png" height="28" width="19"/></svg><span class="bmc-btn-text">&nbsp;Buy me a coffee</span></a>
+
 :Author: Martin F N Cooper, KD6YAM
 :License: :doc:`MIT License <license>`
 
